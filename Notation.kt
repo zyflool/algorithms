@@ -112,7 +112,7 @@ fun convertInfixIntoPostfix(notation: String): String {
         } else {
             if (it == "(")
                 operator.push(it)
-            if (it == " )") {
+            if (it == ")") {
                 while (operator.peek() != "(")
                     stack.push(operator.pop())
                 operator.pop()
@@ -168,7 +168,7 @@ fun convertInfixIntoPrefix(notation: String): String {
         } else {
             if (m[i] == ")")
                 operator.push(m[i])
-            if (m[i] == " (") {
+            if (m[i] == "(") {
                 while (operator.peek() != ")")
                     stack.push(operator.pop())
                 operator.pop()
